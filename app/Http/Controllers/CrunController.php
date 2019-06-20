@@ -77,7 +77,7 @@ class CrunController extends Controller
      */
     public function edit(CRUN $CRUN)
     {
-        return view con array
+        //return view con array
     }
 
     /**
