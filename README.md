@@ -1,3 +1,12 @@
+<p>Lineas de comando 
+1:npm install, para requerir Node Modules
+2:composer install, para descargar composer
+3:php artisan serve, para levantar el servido </p>
+
+
+
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">

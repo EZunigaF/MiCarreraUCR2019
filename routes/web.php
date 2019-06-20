@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/crun', 'HomeController@index')->name('crunHome');
+Route::get('/crun', 'HomeController@create')->name('create');
