@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCrunTable extends Migration
+class CreateTestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCrunTable extends Migration
      */
     public function up()
     {
-        Schema::create('crun', function (Blueprint $table) {
+        Schema::create('tests', function (Blueprint $table) {
             $table->bigIncrements('crun_id');
             $table->string('crun_name');
             $table->string('crun_sede');
@@ -30,6 +30,6 @@ class CreateCrunTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('crun');
+        Schema::dropIfExists('tests');
     }
 }

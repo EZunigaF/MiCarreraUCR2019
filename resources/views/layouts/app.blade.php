@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'MiCarreraU') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -15,16 +15,31 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                                    @auth
+                                        {{-- <td><a href="{{ route('tests.show',$test->id)}}" class="btn btn-primary">Edit</a></td> --}}
+                                        <a class="nav-link" href="{{ route('list') }}"><h2 style="font-size:5vw;">MiCarreraU</h2></a>
+                                        
+                                    @endauth
+
+                                    @guest
+                                        {{-- <td><a href="{{ route('listGuest',$test->id)}}" class="btn btn-primary">VEER Perfil</a></td> --}}
+                                        <a class="nav-link" href="{{ route('list') }}"><h2 style="font-size:5vw;">MiCarreraU</h2></a>
+                                        <p><h4>Bienvenido</h4></p>   
+                                    @endguest
+
+                                    
+                    {{-- <a class="nav-link" href="{{ route('list') }}">MiCarreraU</a> --}}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -37,6 +52,9 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
+                    @auth
+                            <a class="nav-link btn-sucess" href="{{ route('tests.index')}}"><h4>Vista Administrador</h4></a>
+                    @endauth
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest

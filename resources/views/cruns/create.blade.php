@@ -3,16 +3,16 @@
 @section('content')
 
 <div class="container">
-    @component('crun_form', [
-    'CRUN' => null,
-    'action' => route('cruns.store')
+    @component('components.crun_form', [
+    'test' => null,
+    'action' => route('tests.store')
     ])
     @slot('method')
-    @method('POST')
+        @method('POST')
     @endslot
 
     @slot('button_text')
-    @lang('content.create')
+    @lang('Añadir')
     @endslot
     @endcomponent
 </div>

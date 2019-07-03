@@ -13,7 +13,7 @@ class CRUNRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class CRUNRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'crun_name' => 'required',
+            'crun_sede' => 'required',
+            'crun_corte' => 'required',
+            'crun_etiqueta' => 'required'
         ];
     }
 }

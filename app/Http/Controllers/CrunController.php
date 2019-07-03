@@ -15,8 +15,7 @@ class CrunController extends Controller
     {
         $CRUNS = CRUN::all();
 
-        //ocupo una view
-        return view('');
+        return view('cruns.index', ['crun' => $CRUNS]);
     }
 
     /**
@@ -26,10 +25,10 @@ class CrunController extends Controller
      */
     public function create(Request $request)
     {
-          $user = $request->user();
+          //$user = $request->user();
 
           //ocupo una view
-          return view('xxxxx.create');
+          return view('crun.create');
     }
 
     /**
@@ -43,18 +42,18 @@ class CrunController extends Controller
         $this->validate($request,[
           'name' => 'required',
           'sede' => 'required',
-          'corte'=> 'required'
+          //'corte'=> 'required'
         ]);
 
         $CRUN = new CRUN();
         $CRUN->name = $request->name;
         $CRUN->sede = $request->sede;
-        $CRUN->corte= $request->corte;
+        //$CRUN->corte= $request->corte;
 
         $CRUN->save();
 
         //ocupo una view
-        return redirect('/cruns')->with('success','Creado');
+        return redirect('/')->with('success','Creado');
     }
 
     /**
