@@ -41,12 +41,14 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        //dd($request);
+
+         $this->validate($request,[
             'crun_name' => 'required',
             'crun_sede' => 'required',
             'crun_corte' => 'required',
             'crun_etiqueta' => 'required'
-          ]);
+        ]); 
   
           $test = new Test();
           $test->crun_name = $request->crun_name;
@@ -98,7 +100,7 @@ class TestController extends Controller
             'crun_etiqueta' => 'required'
           ]);
   
-          $test = new Test();
+        //   $test = new Test();
           $test->crun_name = $request->crun_name;
           $test->crun_sede = $request->crun_sede;
           $test->crun_corte = $request->crun_corte;

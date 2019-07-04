@@ -25,7 +25,7 @@
           @foreach($tests as $test)
           <tr>
               <td>{{$test->crun_name}}</td>
-              <td><a href="{{ route('tests.show',$test->crun_id)}}" class="btn btn-primary">HOMEBLADE-CRUNID SHOW PERFIL</a></td>
+              <td><a href="{{ route('tests.show',$test->id)}}" class="btn btn-primary">HOMEBLADE-CRUNID SHOW PERFIL</a></td>
               <td>{{$test->sede}}</td>
           </tr>
           @endforeach

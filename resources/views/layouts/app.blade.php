@@ -19,7 +19,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/theme/Micon.png')}}">
+    <link rel="shortcut icon" href="{{ asset('Micon.png') }}">
+
 </head>
 <body>
     <div id="app">
@@ -27,19 +29,14 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                                     @auth
-                                        {{-- <td><a href="{{ route('tests.show',$test->id)}}" class="btn btn-primary">Edit</a></td> --}}
                                         <a class="nav-link" href="{{ route('list') }}"><h2 style="font-size:5vw;">MiCarreraU</h2></a>
                                         
                                     @endauth
 
                                     @guest
-                                        {{-- <td><a href="{{ route('listGuest',$test->id)}}" class="btn btn-primary">VEER Perfil</a></td> --}}
                                         <a class="nav-link" href="{{ route('list') }}"><h2 style="font-size:5vw;">MiCarreraU</h2></a>
                                         <p><h4>Bienvenido</h4></p>   
                                     @endguest
-
-                                    
-                    {{-- <a class="nav-link" href="{{ route('list') }}">MiCarreraU</a> --}}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -62,9 +59,9 @@
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                                </li> --}}
                             @endif
                         @else
                             <li class="nav-item dropdown">
@@ -78,6 +75,7 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('register') }}">{{ __('Registrar Administrador') }}</a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf

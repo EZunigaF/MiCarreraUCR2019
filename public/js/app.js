@@ -61597,17 +61597,6 @@ if (document.getElementById('example')) {
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 0:
 /*!*************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
@@ -61616,7 +61605,7 @@ if (document.getElementById('example')) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\Zuniga\Desktop\Unversidad2019\MCRUN\CRUN\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Zuniga\Desktop\Unversidad2019\MCRUN\CRUN\resources\sass\app.scss */"./resources/sass/app.scss");
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'C:\\Users\\Zuniga\\Desktop\\Unversidad2019\\MCRUN\\CRUN\\resources\\sass\\app.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 /***/ })

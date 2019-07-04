@@ -15,9 +15,8 @@ class GuestController extends Controller
         return view('crun', ['tests' => $tests]);
     }
 
-    public function show(Test $test, id $crun_id)
+    public function show(Test $test)
     {
-        $test = Test::where('id_crun' , id)->first();
         return view('cruns.show', ['test' => $test]);
     }
 

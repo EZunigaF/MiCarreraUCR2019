@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'GuestController@indexMain')->name('index');
+// Route::get('/Home' 'GuestController@Home')->name('')
 
 Auth::routes();
 
@@ -19,5 +20,5 @@ Auth::routes();
 // Route::post('/tests/create', 'TestController@create')->name('tests.create');
 Route::resource('/tests', 'TestController')->middleware('auth');
 Route::get('/list', 'GuestController@indexMain')->name('list');
-Route::get('/listadoGuest', 'GuestController@show')->name('listGuest');
+Route::get('/listadoGuest/{test}', 'GuestController@show')->name('listGuest');
 
